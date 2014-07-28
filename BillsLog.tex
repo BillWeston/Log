@@ -18,11 +18,45 @@
 Fill in some details for the models in their Modelica documentation, also(?) in the wiki.
 If in doubt then {\bf here}.
 
+\verb+(global-set-key (kbd "M-3") "#")+
 \subsection{Wet Clutch}
 The wet clutch did not work in pedantic because not all components of connectors were connected.\\
 Investigate.\\
 Fix is ...?
 $$ \int_0^{\infty}\exp(-x^2) dx $$
+
+\begin{verbatim}
+(defun win-swap ()   "Swap windows using buffer-move.el"   (interactive)     
+(if (null (windmove-find-other-window 'right))         
+(buf-move-left)       (buf-move-right)))
+\end{verbatim}
+
+Can try a git branch and merge.
+But upstairs.  Bored with here now after 2+ hours.
+Do I take the charger?  Probably, then don't need to come down here in the morning.
+
+\section{Monday 28/07/2014  More Modelica}
+
+There is defintely a bug in Dymola when trying to move between
+subcomponent and supercomponent.
+
+\subsection{Investigate torque converter}
+It would be nice to be able to save graphical setups in Dymola.
+It wouldg be nice if S-f1 S-f2 worked to switch between Modelling and Simulation.
+
+This is how to do the colour dynamically:
+
+       fillColor=DynamicSelect({255,255,255}, if open > 0.5 then {0,255,0} else 
+                    {255,255,255}),
+
+in controlled tank system in demos.
+
+
+
+Switched to a new branch 'varargin'
+
+\subsection{Make wet clutch test work pedantic}
+\subsection{Table for controller}
 
 
 \end{document}  
