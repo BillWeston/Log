@@ -35,14 +35,22 @@ Can try a git branch and merge.
 But upstairs.  Bored with here now after 2+ hours.
 Do I take the charger?  Probably, then don't need to come down here in the morning.
 
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/BillWeston/ModelicaPlay.git
+git push -u origin master
+Push an existing repository from the command line
+
+git remote add origin https://github.com/BillWeston/ModelicaPlay.git
+git push -u origin master
+
+
 \section{Monday 28/07/2014  More Modelica}
 
 There is defintely a bug in Dymola when trying to move between
 subcomponent and supercomponent.
-
-\subsection{Investigate torque converter}
-It would be nice to be able to save graphical setups in Dymola.
-It wouldg be nice if S-f1 S-f2 worked to switch between Modelling and Simulation.
 
 This is how to do the colour dynamically:
 
@@ -51,12 +59,59 @@ This is how to do the colour dynamically:
 
 in controlled tank system in demos.
 
+\verb+https://github.com/BillWeston/CppPlay.git+
 
+It would be nice to be able to save graphical setups in Dymola.
+It wouldg be nice if S-f1 S-f2 worked to switch between Modelling and Simulation.
 
-Switched to a new branch 'varargin'
+It would be nice to practice branching and merging in git with this
+while I essentially have only one file to work with.
+\verb+$ git checkout -b pedanticizeWetClutch+
 
+\subsection{Investigate torque converter}
+It would be really nice work out what equations work!
 \subsection{Make wet clutch test work pedantic}
+Investigate the unused things from the error message.
+Pete pointed out I was using an input as sensor and that if I used a
+sensor it would go well.   This is indeed right.   Not {\em entirely}
+sure CLI is still working, there is some error about file but that
+could be to do with reaching across the directories.
 \subsection{Table for controller}
+\subsubsection{Create test model}
+Think about interface.  Presume it is as it should be.  Think about table.  
+input as from vehicle control bus, output hydro stuff..... lots of
+meretricious typing in this model.
+
+\section{Tuesday 29/07/2014  More Modelica}
+\subsection{Investigate torque converter}
+From file:///Users/bill/Downloads/Modeling_Torque_Conv.pdf
+Fluid density (ρ) 840 
+Flow area (A) 0.0097 
+Pump radius (Rp) 0.11 m 
+Turbine radius (Rt) 0.066 m 
+Stator radius (Rs) 0.060 m
+Pump exit angle (ap) 18.01 deg
+Turbine exit angle (at) -59.04 deg
+Stator exit angle (as) 59.54 deg
+Pump inertia (Ip) 0.092 
+Turbine inertia (It) 0.026 
+Stator inertia (Is) 0.012 
+Fluid inertia length (Lf) 0.28 m
+Shock loss coefficient (Csh) 1
+Frictional loss coefficient (Cf) 0.25
+Pump design constant (Sp) -0.001 
+Turbine design constant (St) -0.00002 
+Stator design constant (Ss) 0.002
+
+This is a useful link:
+\verb+http://web.mit.edu/2.972/www/reports/torque_converter/torque_converter.htm+
+
+Here is an \verb+h[]+ table
+parameter Real h[11,2] = [0.0, 0.0; 0.1, 0.25; 0.2, 0.45; 0.3, 0.55; 0.4, 0.70; 0.5, 0.8; 0.6, 0.85; 0.7, 0.89; 0.8, 0.9; 0.9, 0.91; 1.0, 1.0];
+commi
+Here is an \verb+r[]+ table
+parameter Real r[11,2] = [0.0, 2.2; 0.1, 2.01; 0.2, 1.87; 0.3, 1.80; 0.4, 1.65; 0.5, 1.6; 0.6, 1.50; 0.7, 1.30; 0.8, 1.2; 0.9, 1.00; 1.0, 1.0];
+
 
 
 \end{document}  
