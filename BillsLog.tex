@@ -34,7 +34,7 @@ $$ \int_0^{\infty}\exp(-x^2) dx $$
 Can try a git branch and merge.
 But upstairs.  Bored with here now after 2+ hours.
 Do I take the charger?  Probably, then don't need to come down here in the morning.
-
+\begin{verbatim}
 touch README.md
 git init
 git add README.md
@@ -45,7 +45,7 @@ Push an existing repository from the command line
 
 git remote add origin https://github.com/BillWeston/ModelicaPlay.git
 git push -u origin master
-
+\end{verbatim}
 
 \section{Monday 28/07/2014  More Modelica}
 
@@ -53,7 +53,7 @@ There is defintely a bug in Dymola when trying to move between
 subcomponent and supercomponent.
 
 This is how to do the colour dynamically:
-
+I think I need Icon( around this
        fillColor=DynamicSelect({255,255,255}, if open > 0.5 then {0,255,0} else 
                     {255,255,255}),
 
@@ -83,7 +83,9 @@ input as from vehicle control bus, output hydro stuff..... lots of
 meretricious typing in this model.
 
 \section{Tuesday 29/07/2014  More Modelica}
+[In at 0845 Out at 1815]
 \subsection{Investigate torque converter}
+\begin{verbatim}
 From file:///Users/bill/Downloads/Modeling_Torque_Conv.pdf
 Fluid density (ρ) 840 
 Flow area (A) 0.0097 
@@ -102,7 +104,7 @@ Frictional loss coefficient (Cf) 0.25
 Pump design constant (Sp) -0.001 
 Turbine design constant (St) -0.00002 
 Stator design constant (Ss) 0.002
-
+\end{verbatim}
 This is a useful link:
 \verb+http://web.mit.edu/2.972/www/reports/torque_converter/torque_converter.htm+
 
@@ -112,6 +114,12 @@ commi
 Here is an \verb+r[]+ table
 parameter Real r[11,2] = [0.0, 2.2; 0.1, 2.01; 0.2, 1.87; 0.3, 1.80; 0.4, 1.65; 0.5, 1.6; 0.6, 1.50; 0.7, 1.30; 0.8, 1.2; 0.9, 1.00; 1.0, 1.0];
 
+I feared I may have lost some stuff from Tuesday due to bad copying.
+Never mind, I worked on the Torque Converter and got anaconda python
+working.
 
+\section{Wednesday 30 July 2014}
+[in at 0900.  Out at ]
+Torque converter.
 
 \end{document}  
