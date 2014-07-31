@@ -105,12 +105,47 @@ Pump design constant (Sp) -0.001
 Turbine design constant (St) -0.00002 
 Stator design constant (Ss) 0.002
 \end{verbatim}
-This is a useful link:
+This is a useful link:\\
 \verb+http://web.mit.edu/2.972/www/reports/torque_converter/torque_converter.htm+
 
 Here is an \verb+h[]+ table
-parameter Real h[11,2] = [0.0, 0.0; 0.1, 0.25; 0.2, 0.45; 0.3, 0.55; 0.4, 0.70; 0.5, 0.8; 0.6, 0.85; 0.7, 0.89; 0.8, 0.9; 0.9, 0.91; 1.0, 1.0];
-commi
+\begin{table}[h]
+  \centering
+  \begin{tabular}{| c | c |}
+\hline
+Speed Ratio & Efficiency \\
+\hline
+\hline
+0.0 &  0.00 \\ 
+0.1 &  0.25 \\ 
+0.2 &  0.45 \\ 
+0.3 &  0.55 \\ 
+0.4 &  0.70 \\ 
+0.5 &  0.80 \\ 
+0.6 &  0.85 \\ 
+0.7 &  0.89 \\ 
+0.8 &  0.90 \\ 
+0.9 &  0.91 \\ 
+1.0 &  0.95 \\
+\hline
+  \end{tabular}
+  \caption{Efficiency at Varying Speed Ratios}
+  \label{tab:efficiency}
+\end{table}
+\begin{verbatim}
+parameter Real h[11,2] = [
+0.0, 0.0; 
+0.1, 0.25; 
+0.2, 0.45; 
+0.3, 0.55; 
+0.4, 0.70; 
+0.5, 0.8; 
+0.6, 0.85; 
+0.7, 0.89; 
+0.8, 0.9; 
+0.9, 0.91; 
+1.0, 1.0];
+\end{verbatim}
 Here is an \verb+r[]+ table
 parameter Real r[11,2] = [0.0, 2.2; 0.1, 2.01; 0.2, 1.87; 0.3, 1.80; 0.4, 1.65; 0.5, 1.6; 0.6, 1.50; 0.7, 1.30; 0.8, 1.2; 0.9, 1.00; 1.0, 1.0];
 
@@ -119,7 +154,27 @@ Never mind, I worked on the Torque Converter and got anaconda python
 working.
 
 \section{Wednesday 30 July 2014}
-[in at 0900.  Out at ]
+[in at 0900.  Out at 17.30]
+
 Torque converter.
+/Users/bill/Library/Preferences/Aquamacs
+Emacs/Preferences.el/Users/bill/Library/Preferences/Aquamacs
+
+Did Torque Converter without pictures.
+Improve test harness so as to have a big downstream inertia and a
+damping
+
+Roughly speaking gear ratio of 4, final drive of 4 so r is about 15
+$$
+\alpha = {r^2\over MR^2} \tau
+$$
+$$
+J = {MR^2 \over r^2}
+$$
+$J$ of rest of driveline is order of 1.
+mass is about $1500kg$, radius $R$ about a foot, or $ \sqrt{10} $ if
+you like.
+
+This is me using the wedge.  I am not sure it is particularly useful.
 
 \end{document}  
