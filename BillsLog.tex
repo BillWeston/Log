@@ -102,7 +102,8 @@ Fluid inertia length (Lf) 0.28 m
 Shock loss coefficient (Csh) 1
 Frictional loss coefficient (Cf) 0.25
 Pump design constant (Sp) -0.001 
-Turbine design constant (St) -0.00002 
+Turbine design constant (St) -0.0
+0002 
 Stator design constant (Ss) 0.002
 \end{verbatim}
 This is a useful link:\\
@@ -153,7 +154,7 @@ I feared I may have lost some stuff from Tuesday due to bad copying.
 Never mind, I worked on the Torque Converter and got anaconda python
 working.
 
-\section{Wednesday 30 July 2014}
+\section{Wednesday 30/07/2014}
 [in at 0900.  Out at 17.30]
 
 Torque converter.
@@ -176,5 +177,50 @@ mass is about $1500kg$, radius $R$ about a foot, or $ \sqrt{10} $ if
 you like.
 
 This is me using the wedge.  I am not sure it is particularly useful.
+
+\section{Thursday 31/07/2014}
+OK really getting short of time now.
+New plan is to do a Kinematic model and forget about hydraulics for
+now.
+Get something working.
+Also go buy lunch
+The new model has simple tablular manifold/controller which works in
+unit test (be sure to use built in msl).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Friday 01/08/2014}
+Goal is to get Kinetic model running.
+
+\section{General Tasks and Points}
+\label{sec:general-tasks-points}
+
+\begin{itemize}
+ \item Put into Components package:
+   \begin{itemize}
+   \item CyTransmission.Examples.ZF9HPKinematic 
+   \item CyTransmission.Examples.ZF9HPKvil 
+   \end{itemize} 
+\item Add Test Icon to ZF9HP Test. 
+\item Oil for  ZF9HP Test. 
+\end{itemize}
+
+\subsection{Kinetic Manifold}
+\label{sec:kinetic-manifold}
+Got it running.  Check by hand that the outputs are correct.  {\bf The
+outputs are correct.}
+Think about asserts?
+Pete points out that it is not working in CyCLI because can only add
+one level at a time access into an otherwise non-existent bus.
+(A Dymola vs Pure Modelica difference).
+
+\subsection{ZF9HP Test}
+\label{sec:zf9hp}
+Got to battle with buses.   Will tidy first, will commit first.
+And then afterwards to right repo on server with
+\verb+git push -u origin KinematicModel+
+Or whatabout
+\verb+git push --all -u+
+
+
 
 \end{document}  

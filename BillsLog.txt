@@ -146,7 +146,8 @@ here is good command line:
 
 
 C:\Users\colin\Development\cymodelica\CyModelica\CyModelicaCommand\target\CyMode
-lica\dist>CyCLI -action translateandsimulate CyTransmission.Examples.TorqueConve
+lica\dist>
+CyCLI -action translateandsimulate CyTransmission.Examples.TorqueConve
 rterTest TCTest.h5 -path C:/Users/colin/Development/CyTransmission -path C:/User
 s/colin/Development/msl
 
